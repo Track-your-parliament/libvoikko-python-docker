@@ -23,6 +23,6 @@ docker build -t libvoikko-docker .
 ```
 5. Run the docker container
 ```
-docker run -it --mount type=bind,source="$(pwd)"/data,target=/app/output libvoikko-docker:latest
+docker run -it --mount type=bind,source="$(pwd)"/data,target=/app/data libvoikko-docker:latest
 ```
 `--mount` flag is used to sync any input or output files between the container and the host. **This script is set to mount the `data` folder so be sure to use it in the application or update the run script accordingly**.
